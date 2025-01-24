@@ -16,6 +16,7 @@ function applyCartDiscounts(cart, couponCode) {
             categoryDiscount += item.price * item.quantity * 0.05; 
         }
     }
+    const currentMonth = new Date().getMonth();
     if (currentMonth === 11) {
         seasonalDiscount = total * 0.1; 
     }
