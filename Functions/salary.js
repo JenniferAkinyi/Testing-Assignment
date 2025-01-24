@@ -1,4 +1,4 @@
-function netSalary(workHrs){
+function calculateEmployeePay(workHrs){
     let baseSalary = 100000;
     let hourlyRate = 1.5;
     let socialSecurity = 0.04;
@@ -8,13 +8,13 @@ function netSalary(workHrs){
         let overtimePay = overtime * (baseSalary / 40) * hourlyRate;
         let totalSalary = baseSalary + overtimePay;
         let socialSecurityDeduction = totalSalary * socialSecurity;
-        let netSalary = totalSalary - socialSecurityDeduction;
-        return netSalary;
+        let calculateEmployeePay = totalSalary - socialSecurityDeduction;
+        return calculateEmployeePay;
     } else {
         let socialSecurityDeduction = baseSalary * socialSecurity;
-        let netSalary = baseSalary - socialSecurityDeduction;
-        return netSalary;
+        let calculateEmployeePay = baseSalary - socialSecurityDeduction;
+        return calculateEmployeePay;
     }
 }
 
-module.exports = { netSalary };
+module.exports = { calculateEmployeePay };
